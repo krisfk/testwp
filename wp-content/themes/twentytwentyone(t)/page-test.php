@@ -21,12 +21,25 @@
 
     <div>
 
-        <?php    while ( have_posts() ) : ?>
-        <?php the_post(); ?>
-        <?php 
-        echo 1;
-        //get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
-        <?php endwhile; ?>
+        <?php
+       
+       $args = array(  
+        'post_type' => 'student',
+        'post_status' => 'publish',
+        'posts_per_page' => 8, 
+        'orderby' => 'title', 
+        'order' => 'ASC', 
+    );
+
+    $loop = new WP_Query( $args ); 
+        
+    while ( $loop->have_posts() ) : $loop->the_post(); 
+    echo 1;
+        // print the_title(); 
+        // the_excerpt(); 
+    endwhile;
+    
+    ?>
     </div>
 </body>
 
