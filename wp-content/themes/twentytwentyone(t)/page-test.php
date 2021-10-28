@@ -17,8 +17,17 @@
 
     <!-- [fe_widget title="Filters" id="26" show_selected="yes" show_count="yes"] -->
 
-    <div id="testing"></div>
+    <!-- <div id="testing"></div> -->
 
+    <div>
+
+        <?php    while ( have_posts() ) : ?>
+        <?php the_post(); ?>
+        <?php 
+        echo 1;
+        //get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
+        <?php endwhile; ?>
+    </div>
 </body>
 
 </html>
