@@ -24,7 +24,7 @@
         <?php
        
        $args = array(  
-        'post_type' => 'Student',
+        'post_type' => 'Studentt',
         'post_status' => 'publish',
         'posts_per_page' => 8, 
         'orderby' => 'title', 
