@@ -19,7 +19,7 @@
 
     <!-- <div id="testing"></div> -->
 
-    <div>
+    <div id="primary">
 
         <?php
        
