@@ -12,7 +12,7 @@
     <!-- fdfdsafa -->
 
     <?php  ?>
-    <?php //echo do_shortcode('[fe_widget  id="24" show_selected="yes" ] '); ?>
+    <?php echo do_shortcode('[fe_widget  id="24" show_selected="yes" ] '); ?>
 
 
     <!-- [fe_widget title="Filters" id="26" show_selected="yes" show_count="yes"] -->
