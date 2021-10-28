@@ -500,10 +500,15 @@ function twenty_twenty_one_skip_link_focus_fix() {
 
 	// The following is minified via `npx terser --compress --mangle -- assets/js/skip-link-focus-fix.js`.
 	?>
-	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
-	</script>
-	<?php
+<script>
+/(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window
+    .addEventListener("hashchange", (function() {
+        var t, e = location.hash.substring(1);
+        /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i
+            .test(t.tagName) || (t.tabIndex = -1), t.focus())
+    }), !1);
+</script>
+<?php
 }
 add_action( 'wp_print_footer_scripts', 'twenty_twenty_one_skip_link_focus_fix' );
 
@@ -629,11 +634,31 @@ function twentytwentyone_the_html_classes() {
  */
 function twentytwentyone_add_ie_class() {
 	?>
-	<script>
-	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
-		document.body.classList.add( 'is-IE' );
-	}
-	</script>
-	<?php
+<script>
+if (-1 !== navigator.userAgent.indexOf('MSIE') || -1 !== navigator.appVersion.indexOf('Trident/')) {
+    document.body.classList.add('is-IE');
+}
+</script>
+<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+
+
+add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
+function wpc_custom_term_name( $term_name, $e_name ){
+    // $e_name is meta key in our case
+    // $term_name is term value stored in meta field in our case
+    if( $e_name === 'test_checkbox' && $term_name === "Chinese"  ){
+        $term_name = '中文';
+    }
+
+    if( $e_name === 'test_checkbox' && $term_name === "English"  ){
+        $term_name = '英文';
+    }
+
+    if( $e_name === 'test_checkbox' && $term_name === "Japanese"  ){
+        $term_name = '日文';
+    }
+
+    return $term_name;
+}
