@@ -11,7 +11,7 @@
 <body>
     <!-- fdfdsafa -->
 
-    <?php echo do_shortcode('[fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"] '); ?>
+    <?php  ?>
     <?php //echo do_shortcode('[fe_widget  id="24" show_selected="yes" ] '); ?>
 
 
@@ -21,25 +21,7 @@
 
     <div id="primary">
 
-        <?php
-       
-       $args = array(  
-        'post_type' => 'Student',
-        'post_status' => 'publish',
-        'posts_per_page' => 8, 
-        'orderby' => 'title', 
-        'order' => 'ASC', 
-    );
 
-    $loop = new WP_Query( $args ); 
-        
-    while ( $loop->have_posts() ) : $loop->the_post(); 
-    echo 1;
-        // print the_title(); 
-        // the_excerpt(); 
-    endwhile;
-    
-    ?>
     </div>
 </body>
 
