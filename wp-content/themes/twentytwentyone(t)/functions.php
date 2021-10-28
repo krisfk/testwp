@@ -648,15 +648,15 @@ add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
 function wpc_custom_term_name( $term_name, $e_name ){
     // $e_name is meta key in our case
     // $term_name is term value stored in meta field in our case
-    if( $e_name === 'test_checkbox' && $term_name === "Chinese"  ){
+    if( $e_name === 'subject' && $term_name === "Chinese"  ){
         $term_name = '中文';
     }
 
-    if( $e_name === 'test_checkbox' && $term_name === "English"  ){
+    if( $e_name === 'subject' && $term_name === "English"  ){
         $term_name = '英文';
     }
 
-    if( $e_name === 'test_checkbox' && $term_name === "Japanese"  ){
+    if( $e_name === 'subject' && $term_name === "Japanese"  ){
         $term_name = '日文';
     }
 
