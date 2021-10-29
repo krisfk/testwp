@@ -660,10 +660,14 @@ function wpc_custom_term_name( $term_name, $e_name ){
 
 
 function my_enqueue($hook) {
-    if ('post.php' !== $hook  ) {
+    if ('edit.php' !== $hook  ) {
         return;
     }
 
+	if ('post.php' !== $hook  ) {
+        return;
+    }
+	
     wp_enqueue_script('my_custom_script', get_template_directory_uri(). '/myscript.js');
 
 }
