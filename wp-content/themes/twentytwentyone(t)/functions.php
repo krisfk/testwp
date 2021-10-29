@@ -644,10 +644,9 @@ if (-1 !== navigator.userAgent.indexOf('MSIE') || -1 !== navigator.appVersion.in
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
 
+
 add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
 function wpc_custom_term_name( $term_name, $e_name ){
-    // $e_name is meta key in our case
-    // $term_name is term value stored in meta field in our case
     if( $e_name === 'subject' && $term_name === "Chinese"  ){
         $term_name = '中文';
     }
@@ -655,21 +654,17 @@ function wpc_custom_term_name( $term_name, $e_name ){
     if( $e_name === 'subject' && $term_name === "English"  ){
         $term_name = '英文';
     }
-
-    if( $e_name === 'subject' && $term_name === "Japanese"  ){
-        $term_name = '日文';
-    }
-
     return $term_name;
 }
 
+
+
 function my_enqueue($hook) {
-    // Only add to the edit.php admin page.
-    // See WP docs.
-    if ('edit.php' !== $hook) {
+    if ('edit.php' !== $hook || 'post.php' !== $hook ) {
         return;
     }
     wp_enqueue_script('my_custom_script', get_template_directory_uri(). '/myscript.js');
+
 }
 
 add_action('admin_enqueue_scripts', 'my_enqueue');
