@@ -654,6 +654,11 @@ function wpc_custom_term_name( $term_name, $e_name ){
     if( $e_name === 'subject' && $term_name === "English"  ){
         $term_name = '英文';
     }
+
+    if( $e_name === 'subject' && $term_name === "Maths"  ){
+        $term_name = '數學';
+    }
+
     return $term_name;
 }
 
