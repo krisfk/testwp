@@ -693,7 +693,7 @@ add_action('cf7_2_post_form_submitted_to_student', 'new_student_mapped',10,4);
 function new_student_mapped($post_id, $cf7_form_data, $cf7form_key, $submitted_files){
 
 
-	print_r($submitted_files);
+	// print_r($submitted_files);
 	// echo  '<script type="text/javascript">';
 	// alert(7);/
 	// echo'</script>';
