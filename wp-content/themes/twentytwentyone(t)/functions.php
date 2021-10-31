@@ -680,3 +680,18 @@ function my_enqueue($hook) {
 }
 
 // add_action('admin_enqueue_scripts', 'my_enqueue');
+
+
+add_action('cf7_2_post_form_submitted_to_student', 'new_student_mapped',10,4);
+/**
+* Function to take further action once form has been submitted and saved as a post.  Note this action is only fired for submission which has been submitted as opposed to saved as drafts.
+* @param string $post_id new post ID to which submission was saved.
+* @param array $cf7_form_data complete set of data submitted in the form as an array of field-name=>value pairs.
+* @param string $cf7form_key unique key to identify your form.
+* @param array $submitted_files array of files submitted in the form, if any file fields are present.
+*/
+function new_student_mapped($post_id, $cf7_form_data, $cf7form_key, $submitted_files){
+	echo 43242;
+	exit;
+  //do something.
+}
