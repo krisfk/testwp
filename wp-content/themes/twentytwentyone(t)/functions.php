@@ -667,7 +667,7 @@ function wpc_custom_term_name( $term_name, $e_name ){
 function my_enqueue($hook) {
     if ('edit.php' === $hook ||'post.php' === $hook   ) {
         // return;
-		test();
+		// test();
 		wp_enqueue_script('my_custom_script', get_template_directory_uri(). '/myscript.js');
 
     }
@@ -703,6 +703,6 @@ function new_student_mapped($post_id, $cf7_form_data, $cf7form_key, $submitted_f
   //do something.
 }
 
-function test(){
-	echo 12345;
-}
+// function test(){
+// 	echo 12345;
+// }
