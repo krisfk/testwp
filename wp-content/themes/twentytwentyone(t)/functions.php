@@ -680,7 +680,7 @@ function my_enqueue($hook) {
 
 }
 
-// add_action('admin_enqueue_scripts', 'my_enqueue');
+add_action('admin_enqueue_scripts', 'my_enqueue');
 
 
 add_action('cf7_2_post_form_submitted_to_student', 'new_student_mapped',10,4);
