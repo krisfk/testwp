@@ -645,14 +645,14 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
 
 
-// add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
-// function wpc_custom_term_name( $term_name, $e_name ){
+add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
+function wpc_custom_term_name( $term_name, $e_name ){
 	
 
 
-    if( $e_name === 'level' && $term_name === "K1"  ){
-        $term_name = '中文';
-    }
+    // if( $e_name === 'level' && $term_name === "K1"  ){
+    //     $term_name = '中文';
+    // }
 	// if( $e_name === 'level' && $term_name === "K2"  ){
     //     $term_name = '英文';
     // }
@@ -662,20 +662,20 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
     // }
 
 	
-    if( $e_name === 'subject' && $term_name === "中文"  ){
-        $term_name = 'fdsafdas';
+    if( $e_name === 'subject' && $term_name === "Chinese"  ){
+        $term_name = '中文';
     }
 
-	if( $e_name === 'subject' && $term_name === "英文"  ){
-        $term_name = 'fds';
+	if( $e_name === 'subject' && $term_name === "English"  ){
+        $term_name = '英文';
     }
 
-    if( $e_name === 'subject' && $term_name === "數學"  ){
-        $term_name = 'fdsfdsa';
+    if( $e_name === 'subject' && $term_name === "Maths"  ){
+        $term_name = '數學';
     }
 
-    // return $term_name;
-// }
+    return $term_name;
+}
 
 
 /* Let's sort Color filter terms by the menu_order */
