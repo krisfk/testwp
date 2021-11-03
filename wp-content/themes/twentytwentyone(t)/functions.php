@@ -648,11 +648,12 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
 function wpc_custom_term_name( $term_name, $e_name ){
 	
-    if( $e_name === 'level' && $term_name === "K1"  ){
-        $term_name = '日日';
-    }
+
 	if( $e_name === 'level' && $term_name === "K2"  ){
         $term_name = '中中';
+    }
+    if( $e_name === 'level' && $term_name === "K1"  ){
+        $term_name = '日日';
     }
 
     // if( $e_name === 'subject' && $term_name === "English"  ){
