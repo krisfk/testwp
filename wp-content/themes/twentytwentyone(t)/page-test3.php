@@ -22,8 +22,8 @@ get_header();
 $query = new WP_Query(
     array(
         'post_type' => 'student', 
-		// 'posts_per_page' => 2,
-		// 'paged' => $paged
+		'posts_per_page' => 2,
+		'paged' => $paged
 
         // 'meta_key' => '_wp_page_template',
         // 'meta_value' => 'my_template.php'
