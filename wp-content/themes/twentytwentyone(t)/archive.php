@@ -34,10 +34,10 @@ $description = get_the_archive_description();
 
 </div>
 <?php 
-//twenty_twenty_one_the_posts_navigation(); ?>
+twenty_twenty_one_the_posts_navigation(); ?>
 
 <?php else : ?>
-<?php //get_template_part( 'template-parts/content/content-none' ); ?>
+<?php get_template_part( 'template-parts/content/content-none' ); ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>
