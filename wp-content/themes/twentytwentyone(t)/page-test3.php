@@ -51,7 +51,7 @@ while ( $query->have_posts() ) :
 	// }
 endwhile; // End of the loop.
 ?>
-    <!-- <div class="pagination">
+    <div class="pagination">
         <?php 
         echo paginate_links( array(
             'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
@@ -69,7 +69,7 @@ endwhile; // End of the loop.
             'add_fragment' => '',
         ) );
     ?>
-    </div> -->
+    </div>
 </div>
 <?php
 get_footer();
