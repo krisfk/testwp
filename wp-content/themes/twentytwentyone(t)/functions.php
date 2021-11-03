@@ -661,6 +661,7 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
     //     $term_name = '數學';
     // }
 
+	
     if( $e_name === 'subject' && $term_name === "Chinese"  ){
         $term_name = '中文';
     }
