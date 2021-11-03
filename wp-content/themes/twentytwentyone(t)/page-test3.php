@@ -29,6 +29,7 @@ $query = new WP_Query(
 
 
 while ( $query->have_posts() ) :
+	echo 1;
 	$query->the_post();
 	get_template_part( 'template-parts/content/content-page' );
 
