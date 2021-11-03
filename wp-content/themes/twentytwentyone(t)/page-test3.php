@@ -33,6 +33,9 @@ while ( $query->have_posts() ) :
 	// echo 1;
 	$query->the_post();
 	// get_template_part( 'template-parts/content/content-page' );
+	?>
+<br>
+<?php
 
 	echo get_the_title();
 	// If comments are open or there is at least one comment, load up the comment template.
