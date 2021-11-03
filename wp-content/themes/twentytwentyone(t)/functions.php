@@ -672,6 +672,29 @@ function wpc_custom_term_name( $term_name, $e_name ){
 }
 
 
+/* Let's sort Color filter terms by the menu_order */
+add_filter('wpc_terms_before_display', 'wpc_sort_terms_as_needed', 10, 2);
+function wpc_sort_terms_as_needed($terms, $filter){
+    // pa_color - is desired taxonomy
+    if ($filter['e_name'] === 'level') {
+        $newTerms = [];
+        foreach ($terms as $k => $term) {
+            $termOrder = get_term_meta($term->term_id, 'order', true);
+            $term->menu_order = ($termOrder !== false) ? $termOrder : 0;
+            $newTerms[$k] = $term;
+        }
+
+        // To sort in descending order
+        // usort( $newTerms, \FilterEverything\Filter\EntityManager::compareDesc('menu_order') );
+        // To sort in ascending order
+        usort($newTerms, \FilterEverything\Filter\EntityManager::compareAsc('menu_order'));
+
+        return $newTerms;
+    }
+
+    return $terms;
+}
+
 
 function my_enqueue($hook) {
     if ('edit.php' === $hook ||'post.php' === $hook   ) {
