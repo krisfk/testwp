@@ -660,13 +660,18 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 	// if( $e_name === 'level' && $term_name === "K3"  ){
     //     $term_name = '數學';
     // }
-    // if( $e_name === 'subject' && $term_name === "English"  ){
-    //     $term_name = '英文';
-    // }
 
-    // if( $e_name === 'subject' && $term_name === "Maths"  ){
-    //     $term_name = '數學';
-    // }
+    if( $e_name === 'subject' && $term_name === "Chinese"  ){
+        $term_name = '中文';
+    }
+
+	if( $e_name === 'subject' && $term_name === "English"  ){
+        $term_name = '英文';
+    }
+
+    if( $e_name === 'subject' && $term_name === "Maths"  ){
+        $term_name = '數學';
+    }
 
     // return $term_name;
 // }
