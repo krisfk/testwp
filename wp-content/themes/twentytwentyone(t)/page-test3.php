@@ -29,7 +29,7 @@ $query = new WP_Query(
 
 
 while ( $query->have_posts() ) :
-	the_post();
+	$query->the_post();
 	get_template_part( 'template-parts/content/content-page' );
 
 	// If comments are open or there is at least one comment, load up the comment template.
