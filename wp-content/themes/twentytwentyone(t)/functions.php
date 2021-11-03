@@ -663,15 +663,15 @@ function wpc_custom_term_name( $term_name, $e_name ){
 
 	
     if( $e_name === 'subject' && $term_name === "Chinese"  ){
-        $term_name = '中文';
+        $term_name = '1中文';
     }
 
 	if( $e_name === 'subject' && $term_name === "English"  ){
-        $term_name = '英文';
+        $term_name = '2英文';
     }
 
     if( $e_name === 'subject' && $term_name === "Maths"  ){
-        $term_name = '數學';
+        $term_name = '3數學';
     }
 
     return $term_name;
