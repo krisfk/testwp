@@ -650,9 +650,9 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 	
 
 
-    // if( $e_name === 'level' && $term_name === "K1"  ){
-    //     $term_name = '中文';
-    // }
+    if( $e_name === 'level' && $term_name === "K1"  ){
+        $term_name = '中文';
+    }
 	// if( $e_name === 'level' && $term_name === "K2"  ){
     //     $term_name = '英文';
     // }
