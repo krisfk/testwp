@@ -33,7 +33,8 @@ $description = get_the_archive_description();
 
 
 </div>
-<?php //twenty_twenty_one_the_posts_navigation(); ?>
+<?php 
+//twenty_twenty_one_the_posts_navigation(); ?>
 
 <?php else : ?>
 <?php //get_template_part( 'template-parts/content/content-none' ); ?>
