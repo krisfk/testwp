@@ -663,15 +663,15 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
 	
     if( $e_name === 'subject' && $term_name === "中文"  ){
-        $term_name = '中文';
+        $term_name = 'fdsafdas';
     }
 
 	if( $e_name === 'subject' && $term_name === "英文"  ){
-        $term_name = '英文';
+        $term_name = 'fds';
     }
 
     if( $e_name === 'subject' && $term_name === "數學"  ){
-        $term_name = '數學';
+        $term_name = 'fdsfdsa';
     }
 
     // return $term_name;
