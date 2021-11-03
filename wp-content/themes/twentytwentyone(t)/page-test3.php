@@ -17,13 +17,13 @@ get_header();
 
 <?php
 /* Start the Loop */
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+// $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 $query = new WP_Query(
     array(
         'post_type' => 'student', 
-		'posts_per_page' => 2,
-		'paged' => $paged
+		// 'posts_per_page' => 2,
+		// 'paged' => $paged
 
         // 'meta_key' => '_wp_page_template',
         // 'meta_value' => 'my_template.php'
@@ -51,7 +51,7 @@ while ( $query->have_posts() ) :
 	// }
 endwhile; // End of the loop.
 ?>
-    <div class="pagination">
+    <!-- <div class="pagination">
         <?php 
         echo paginate_links( array(
             'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
@@ -69,7 +69,7 @@ endwhile; // End of the loop.
             'add_fragment' => '',
         ) );
     ?>
-    </div>
+    </div> -->
 </div>
 <?php
 get_footer();
