@@ -16,7 +16,19 @@ get_header();
 
 <?php
 /* Start the Loop */
-while ( have_posts() ) :
+
+$query = new WP_Query(
+    array(
+        'post_type' => 'student'
+        // 'meta_key' => '_wp_page_template',
+        // 'meta_value' => 'my_template.php'
+    )
+);
+
+
+
+
+while ( $query->have_posts() ) :
 	the_post();
 	get_template_part( 'template-parts/content/content-page' );
 
