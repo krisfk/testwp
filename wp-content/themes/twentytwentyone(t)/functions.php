@@ -650,16 +650,16 @@ function wpc_custom_term_name( $term_name, $e_name ){
 	
 
 
-    if( $e_name === 'level' && $term_name === "K1"  ){
-        $term_name = '中文';
-    }
-	if( $e_name === 'level' && $term_name === "K2"  ){
-        $term_name = '英文';
-    }
+    // if( $e_name === 'level' && $term_name === "K1"  ){
+    //     $term_name = '中文';
+    // }
+	// if( $e_name === 'level' && $term_name === "K2"  ){
+    //     $term_name = '英文';
+    // }
 
-	if( $e_name === 'level' && $term_name === "K3"  ){
-        $term_name = '數學';
-    }
+	// if( $e_name === 'level' && $term_name === "K3"  ){
+    //     $term_name = '數學';
+    // }
     // if( $e_name === 'subject' && $term_name === "English"  ){
     //     $term_name = '英文';
     // }
@@ -668,7 +668,7 @@ function wpc_custom_term_name( $term_name, $e_name ){
     //     $term_name = '數學';
     // }
 
-    return $term_name;
+    // return $term_name;
 }
 
 
