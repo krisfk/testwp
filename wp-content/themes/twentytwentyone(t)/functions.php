@@ -668,7 +668,7 @@ function my_enqueue($hook) {
     if ('edit.php' === $hook ||'post.php' === $hook   ) {
         // return;
 		// test();
-		wp_enqueue_script('my_custom_script', get_template_directory_uri(). '/myscript.js');
+		// wp_enqueue_script('my_custom_script', get_template_directory_uri(). '/myscript.js');
 
     }
 	else
