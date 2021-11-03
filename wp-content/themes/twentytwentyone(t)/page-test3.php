@@ -28,14 +28,17 @@ $query = new WP_Query(
 
 
 // [fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"]
+?>
+<div id="students-div">
 
+    <?php
 while ( $query->have_posts() ) :
 	// echo 1;
 	$query->the_post();
 	// get_template_part( 'template-parts/content/content-page' );
 	?>
-<br>
-<?php
+    <br>
+    <?php
 
 	echo get_the_title();
 	// If comments are open or there is at least one comment, load up the comment template.
@@ -43,5 +46,7 @@ while ( $query->have_posts() ) :
 	// 	comments_template();
 	// }
 endwhile; // End of the loop.
-
+?>
+</div>
+<?php
 get_footer();
