@@ -645,8 +645,8 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
 
 
-add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
-function wpc_custom_term_name( $term_name, $e_name ){
+// add_filter( 'wpc_filter_post_meta_term_name', 'wpc_custom_term_name', 10, 2 );
+// function wpc_custom_term_name( $term_name, $e_name ){
 	
 
 
@@ -669,7 +669,7 @@ function wpc_custom_term_name( $term_name, $e_name ){
     // }
 
     // return $term_name;
-}
+// }
 
 
 /* Let's sort Color filter terms by the menu_order */
