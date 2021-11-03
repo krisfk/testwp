@@ -33,7 +33,7 @@ $query = new WP_Query(
 
 // [fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"]
 ?>
-<div id="students-div">
+<div id="student-div">
 
     <?php
 while ( $query->have_posts() ) :
