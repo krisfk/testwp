@@ -13,6 +13,7 @@ get_header();
 
 ?>
 
+<?php echo do_shortcode('[fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"] '); ?>
 
 <?php
 /* Start the Loop */
@@ -26,17 +27,18 @@ $query = new WP_Query(
 );
 
 
-
+// [fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"]
 
 while ( $query->have_posts() ) :
-	echo 1;
+	// echo 1;
 	$query->the_post();
-	get_template_part( 'template-parts/content/content-page' );
+	// get_template_part( 'template-parts/content/content-page' );
 
+	echo get_the_title();
 	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
+	// if ( comments_open() || get_comments_number() ) {
+	// 	comments_template();
+	// }
 endwhile; // End of the loop.
 
 get_footer();
