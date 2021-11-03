@@ -20,7 +20,9 @@ get_header();
 
 $query = new WP_Query(
     array(
-        'post_type' => 'student'
+        'post_type' => 'student', 
+		'posts_per_page' => 2,
+        'paged' => 1
         // 'meta_key' => '_wp_page_template',
         // 'meta_value' => 'my_template.php'
     )
@@ -47,6 +49,7 @@ while ( $query->have_posts() ) :
 	// }
 endwhile; // End of the loop.
 ?>
+
 </div>
 <?php
 get_footer();
