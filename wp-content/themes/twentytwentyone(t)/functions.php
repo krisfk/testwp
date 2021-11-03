@@ -662,15 +662,15 @@ add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
     // }
 
 	
-    if( $e_name === 'subject' && $term_name === "Chinese"  ){
+    if( $e_name === 'subject' && $term_name === "中文"  ){
         $term_name = '中文';
     }
 
-	if( $e_name === 'subject' && $term_name === "English"  ){
+	if( $e_name === 'subject' && $term_name === "英文"  ){
         $term_name = '英文';
     }
 
-    if( $e_name === 'subject' && $term_name === "Maths"  ){
+    if( $e_name === 'subject' && $term_name === "數學"  ){
         $term_name = '數學';
     }
 
