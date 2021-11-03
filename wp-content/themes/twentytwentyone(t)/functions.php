@@ -685,9 +685,9 @@ function wpc_sort_terms_as_needed($terms, $filter){
         }
 
         // To sort in descending order
-        // usort( $newTerms, \FilterEverything\Filter\EntityManager::compareDesc('menu_order') );
+        usort( $newTerms, \FilterEverything\Filter\EntityManager::compareDesc('menu_order') );
         // To sort in ascending order
-        usort($newTerms, \FilterEverything\Filter\EntityManager::compareAsc('menu_order'));
+        // usort($newTerms, \FilterEverything\Filter\EntityManager::compareAsc('menu_order'));
 
         return $newTerms;
     }
