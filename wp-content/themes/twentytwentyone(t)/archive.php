@@ -14,7 +14,7 @@ get_header();
 $description = get_the_archive_description();
 ?>
 <?php //echo 999;?>
-<?php echo do_shortcode('[fe_widget title="Filters" id="24" show_selected="yes" show_count="yes"] '); ?>
+<?php echo do_shortcode('[fe_widget title="Filters" id="114" show_selected="yes" show_count="yes"] '); ?>
 
 <?php if ( have_posts() ) : ?>
 
